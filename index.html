@@ -9,10 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/800c00f5c3.js" crossorigin="anonymous"></script>
+    <!-- 저장된 테마를 먼저 적용해 깜빡임 방지 -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
     <!-- 폰트 종류 -> 구글폰트, 눈누, Font Awesome -->
 </head>
 <body>
     <main class="main">
+        <!-- 다크 모드 토글 — 카드 우측 상단 -->
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="다크 모드 전환">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
         <header>
             <img src="me.jpg" alt="프로필 사진">
             <h1>강주영</h1>
