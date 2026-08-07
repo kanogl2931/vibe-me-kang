@@ -3,10 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>강주영 사이트</title>
+    <title>강주영 | 프로필</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/800c00f5c3.js" crossorigin="anonymous"></script>
+    <!-- 폰트 종류 -> 구글폰트, 눈누, Font Awesome -->
 </head>
 <body>
+    <main class="main">
+        <header>
+            <img src="me.jpg" alt="프로필 사진">
+            <h1>강주영</h1>
+            <h2>안녕하세요주영입니다잘부탁드립니다 <i class="fa-regular fa-circle-check"></i></h2>
+            <p class="rote">동국대 · 산업시스템공학과 . 23학번</p>
+        </header>
+
+        <section class="section">
+            <p>효율적인 세상을 위해 생각합니다.</p>
+        </section>
+
+        <!-- 외부 사이트 링크 -->
+        <nav class="nav">
+            <a href="https://github.com/kanogl2931" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://app.notion.com/p/AI-Boot-camp-39970bc570038056abefe2e379e3240c#3b370bc570038010b973c49e2a2c607e" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-notion"></i> Notion
+            </a>
+        </nav>
+
+        <div class="btn-row">
+            <button class="btn" id="contactBtn" type="button">연락처 보기</button>
+            <button class="btn" id="contactBtn" type="button">연락처 숨기기</button>
+        </div>
+
+        <p id="contactInfo" hidden>이메일: legokju@gmail.com</p>
+
+        <footer>© 2026 Ju-Young-Kang. All rights reserved.</footer>
+    </main>
+
+    <!-- 화면 위를 덮는 연락처 모달 (기본은 숨김, is-open이면 표시) -->
+    <div class="modal" id="modal">
+        <div class="modal__box">
+            <h2>연락처</h2>
+            <p>이메일: legokju@gmail.com</p>
+            <button type="button" id="CloseBtn">닫기</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
