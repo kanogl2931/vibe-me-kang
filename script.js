@@ -22,18 +22,10 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') modal.classList.remove('is-open');
 });
 
-// 다크 모드 토글 + 선택 저장
+// 다크 모드 토글 + 선택 저장 (아이콘은 CSS가 달/해로 전환)
 const themeToggle = document.querySelector('#themeToggle');
-const themeIcon = themeToggle.querySelector('i');
-
-function updateThemeIcon(isDark) {
-    themeIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-}
-
-updateThemeIcon(document.documentElement.classList.contains('dark'));
 
 themeToggle.addEventListener('click', () => {
     const isDark = document.documentElement.classList.toggle('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    updateThemeIcon(isDark);
 });

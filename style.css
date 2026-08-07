@@ -72,6 +72,19 @@ body {
     transform: scale(1.08);
 }
 
+/* 라이트: 달 표시 / 다크: 해 표시 (Font Awesome SVG 변환 대응) */
+.theme-toggle .fa-sun {
+    display: none !important;
+}
+
+html.dark .theme-toggle .fa-moon {
+    display: none !important;
+}
+
+html.dark .theme-toggle .fa-sun {
+    display: inline-block !important;
+}
+
 /* 명함 카드 컨테이너 + 입장 시 부드러운 등장 */
 .main {
     position: relative;
